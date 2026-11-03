@@ -1,6 +1,9 @@
 package com.qflornia.autofigure
 
-import android.os.Bundle\nimport android.graphics.Bitmap\nimport android.graphics.BitmapFactory\nimport java.io.ByteArrayOutputStream
+import android.os.Bundle
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
+import java.io.ByteArrayOutputStream
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.activity.ComponentActivity
@@ -39,7 +42,9 @@ private fun AutoFigureScreen() {
     var key by remember { mutableStateOf(prefs.getString("key", "") ?: "") }
     var model by remember { mutableStateOf(prefs.getString("model", "google/gemini-3.1-pro-preview") ?: "") }
     var instruction by remember { mutableStateOf("") }
-    var pdfName by remember { mutableStateOf("") }\n    var referenceImage by remember { mutableStateOf<ByteArray?>(null) }\n    var referenceImageName by remember { mutableStateOf("") }
+    var pdfName by remember { mutableStateOf("") }
+    var referenceImage by remember { mutableStateOf<ByteArray?>(null) }
+    var referenceImageName by remember { mutableStateOf("") }
     var enhancementPrompt by remember { mutableStateOf("") }
     var showHistory by remember { mutableStateOf(false) }
     val store = remember { ProjectStore(context) }
